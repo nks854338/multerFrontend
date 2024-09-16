@@ -11,7 +11,7 @@ const App = () => {
   const fetchImages = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/');
+      const res = await axios.get('https://multer-backend-xi.vercel.app/');
       setImages(res.data); 
     } catch (err) {
       console.error("Error fetching images:", err);
@@ -38,7 +38,7 @@ const App = () => {
     formData.append('photo', file); 
 
     try {
-      await axios.post('http://localhost:5000/upload', formData, {
+      await axios.post('https://multer-backend-xi.vercel.app/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
