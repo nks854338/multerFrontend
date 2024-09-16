@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: #0d1b2a;
+}
+
+.container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 40px;
+  color: #fff;
+}
+
+form {
+  width: 70vmin;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+form button {
+  width: 30%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+input {
+  box-shadow: grey 0 0 2px;
+  width: 65%;
+  border-radius: 8px;
+
+}
+
+[type="file"] {
+  color: #878787;
+}
+[type="file"]::-webkit-file-upload-button {
+  background: #eee;
+  border: 2px solid #eee;
+  color: #0d1b0d;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
+  height: 100%;
+  width: 40%;
+}
+
+[type="file"]::-webkit-file-upload-button:hover {
+  color: #000;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  width: 240px;
+  height: 230px;
+  margin: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 850px) and (max-width: 1250px) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+  }
+
+  .image {
+    width: 18vmin;
+    height: 18vmin;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 850px) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+
+  .image {
+    width: 18vmin;
+    height: 18vmin;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 550px){
+    .images {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image {
+        width: 90%;
+        height: auto;
+        margin: 10px;
+        padding: 35px;
+      }
+
+      form {
+        width: 90vmin;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+      }
+
+      [type="file"] {
+        color: #878787;
+      }
+      [type="file"]::-webkit-file-upload-button {
+        border: 2px solid #eee;
+        font-size: 12px;
+        outline: none;
+        padding: 4px 7px;
+        text-transform: uppercase;
+        transition: all 1s ease;
+        height: 100%;
+        width: 40%;
+      }
+      
+}
+
